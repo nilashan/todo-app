@@ -1,0 +1,71 @@
+<body>
+<p></p>
+<div class="container">
+  <div class="jumbotron">
+    <h1>TODO Emirates</h1>
+    <h2>Save your tasks</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-primary copyright-wrap animated infinite shake" id="copyright-wrap"
+           *ngFor="let a of _todoLists; let i = index;">
+        <div class="panel-heading">{{a.title}}
+          <button type="button" class="btn btn-danger custom-head" (click)="deleteTodoList(a.todo_id);"><i
+            class="fa fa-trash"></i>
+          </button>
+        </div>
+        <div class="panel-body">
+          <div class="col-md-10">{{a.description}}</div>
+          <div class="col-md-2">
+            <button type="button"
+                    [ngClass]="a.status === 'Completed' ? 'btn btn-success custom-head': 'btn btn-warning custom-head'"
+                    (click)="changeStatus(i, a);"><i
+              [ngClass]="a.status === 'Completed' ? 'fa fa-check' :'fa fa-stop'"></i>&nbsp;{{a.status}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-primary btn-lg custom-button" (click)="clearInsert(); insertmodal.show();"><i
+    class="fa fa-plus"></i></button>
+</div>
+</body>
+
+<modal class="modal-lg modal-dialog" #insertmodal title="Insert Todo List" size="modal-lg">
+  <div class="modal-body">
+    <div class="col-md-12" style="margin-top: 15px;">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" [(ngModel)]="addTodo.title" id="title"
+                 placeholder="Title" [ngModelOptions]="{standalone: true}">
+          <div *ngIf="insertValidateModel.title" class="notification-validation-error-label">
+            {{insertValidateModel.title}}
+          </div>
+
+        </div>
+        <div class="form-group">
+          <label for="des">Description</label>
+          <textarea class="form-control" id="des" [(ngModel)]="addTodo.description" rows="3"
+          placeholder="Description"></textarea>
+          <div *ngIf="insertValidateModel.description" class="notification-validation-error-label">
+            {{insertValidateModel.description}}
+          </div>
+
+        </div>
+
+
+
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="addTodoList();"><i class="fa fa-save"></i>&nbsp;Save</button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="insertmodal.hide();"><i class="fa fa-close"></i>&nbsp;Close</button>
+  </div>
+  </modal>
+
+
+
+
+

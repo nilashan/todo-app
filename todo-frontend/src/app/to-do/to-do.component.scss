@@ -1,0 +1,55 @@
+.rounded {
+  border-radius: 5px;
+  border: 1px solid #cfd8dc;
+}
+
+.card-header {
+  background-color: #e6e6e6;
+}
+
+@media (min-width: 576px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
+  }
+}
+//
+//.card-backround{
+//  background-color:#f2f2f2;
+//  padding-right: 10px;
+//  padding-left: 10px;
+//  padding-top: 10px;
+//  padding-bottom: 10px;
+//}
+
+.p-2-2{
+  background-color:#f2f2f2;
+}
+
+.rig-flo{
+  float: right;
+  padding-right: 20px;
+}
+
+
+.table tr.active td {
+  background-color:#123456 !important;
+  color: white;
+}
+
+.custom-head{
+  float: right !important;
+  padding-bottom: 3px !important;
+  padding-top: 1px !important;
+}
+
+.custom-button{
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
+
+.modal-dialog {
+  vertical-align: middle !important;
+}

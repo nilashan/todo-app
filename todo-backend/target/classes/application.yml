@@ -1,0 +1,39 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: todo-ms
+  security:
+    enabled: false
+  main:
+    banner-mode: console
+
+server:
+  port: 8000
+  contextPath: /todo-api
+
+security:
+  basic:
+    enabled: false
+management:
+  security:
+    enabled: false
+
+# Enabling H2 Console
+application:
+  datasource:
+    spring.h2.console.enabled=true
+    spring.datasource.url=jdbc:h2:~/test
+    spring.datasource.driverClassName=org.h2.Driver
+    spring.datasource.username=sa
+    spring.datasource.password=
+    spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+
+#application:
+#  datasource:
+#      type: com.zaxxer.hikari.HikariDataSource
+#      url: jdbc:oracle:thin:@172.26.82.166:1521:ONECRMOM
+#      password: failov
+#      user: failov
+
