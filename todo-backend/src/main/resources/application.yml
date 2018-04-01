@@ -30,10 +30,3 @@ application:
     spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 
 
-#application:
-#  datasource:
-#      type: com.zaxxer.hikari.HikariDataSource
-#      url: jdbc:oracle:thin:@172.26.82.166:1521:ONECRMOM
-#      password: failov
-#      user: failov
-
