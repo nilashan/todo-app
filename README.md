@@ -17,7 +17,7 @@ run the following sample queries in it.
 
 DROP TABLE IF EXISTS TODO;
 CREATE TABLE TODO(TODO_ID INT PRIMARY KEY, TITLE VARCHAR(255), DESCRIPTION VARCHAR(255), STATUS VARCHAR(255));
-INSERT INTO TODO VALUES (1, 'Book flight ticket', 'Need to book a flight ticket to go Dubai, 'Incomplete');
+INSERT INTO TODO VALUES (1, 'Book flight ticket', 'Need to book a flight ticket to go Dubai', 'Incomplete');
 INSERT INTO TODO VALUES (2, 'Order Dinner', 'Need to order pizza for dinner', 'Completed');
 ```
 

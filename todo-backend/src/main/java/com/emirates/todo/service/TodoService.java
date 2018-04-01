@@ -6,8 +6,6 @@ import org.springframework.http.ResponseEntity;
 import com.emirates.todo.domain.util.ApiResponse;
 
 
-import java.util.List;
-
 /**
  * Created by nilashan on 3/30/18.
  */
